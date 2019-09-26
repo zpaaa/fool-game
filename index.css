@@ -41,8 +41,22 @@ a:hover {
 body {
     background: #c88ca9;
 }
+
+.start-btn {
+    background:linear-gradient(#ff8502, #fe6000);;
+    color: #fff;
+    border-radius: 3px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* header css */
+
+
 header {
-    background: #2e2e2e
+    width: 100vw;
+    min-width: 990px;
+    background: #2e2e2e;
 }
 
 nav {
@@ -91,14 +105,21 @@ nav div {
     color: #c9caca;
 }
 
+
+/* banner css */
+
+
 .banner {
     margin: 0 auto;
 }
 
 .banner img {
     width: 100vw;
+    min-width: 990px;
     display: block
 }
+
+/* main css */
 
 .main {
     width: 100vw;
@@ -114,6 +135,7 @@ nav div {
     padding: 15px;
     border: 3px solid #be5076;
     background: #fff;
+    border-radius: 6px
    
 }
 
@@ -132,7 +154,6 @@ nav div {
     left: 50%;
     transform: translateX(-50%) 
 }
-
 
 
 .top, .mid, .bot {
@@ -297,9 +318,6 @@ nav div {
     height: 33px;
     line-height: 33px;
     text-align: center;
-    background:linear-gradient(#ff8502, #fe6000);;
-    color: #fff;
-    border-radius: 3px;
     margin-top: 7px;
 }
 
@@ -338,18 +356,27 @@ nav div {
     font-size: 12px;
     color: #333333;
     margin-bottom: 2px;
+}
 
+.main .rank-con .star-con {
+    width: 74px;
+    height: 12px;
+    background: url(./images/grey-satrt.png);
+    position: relative;
+    overflow: hidden;
+}
+
+.main .rank-con .star-con .star-wrap {
+    width: 74px;
+    height: 12px;
+    background: url(./images/orange-start.png);
 }
 
 .main .rank-con .start-btn {
     width: 84px;
     height: 27px;
     line-height: 27px;
-    background:linear-gradient(#ff8502, #fe6000);
-    text-align: center;
-    color: #fff;
     font-size: 14px;
-    border-radius: 3px
 }
 
 

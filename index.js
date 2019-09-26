@@ -7,7 +7,7 @@ class Swiper {
     this.init();
     this.timer;
     this.timeStamp;
-    this.trigger = trigger
+    this.trigger = trigger;
   }
 
   init() {
@@ -43,17 +43,21 @@ class Swiper {
 
   // 上下切换
   verticalSwitch(i) {
-    console.log(this.activeIndex)
+    clearTimeout(this.timeStamp)
     this.imgCon.style.cssText="transition: top 1s ease-out;"
     this.imgCon.style.top = -i*200 + 'px'
     const { offsetHeight, offsetTop } = this.imgCon
-    // console.log(offsetHeight, offsetTop)
     if (-offsetTop === offsetHeight / 2) {
-      this.imgCon.style.cssText="transition: top 0s ease-out; top: 0"   
-      this.activeIndex = 0
+      console.log('top-0')
+      // top - 0
+      this.imgCon.style.cssText="top: 0"
+      this.timeStamp = setTimeout(()=>{
+        // 位移
+        this.imgCon.style.cssText="transition: top 1s ease-out;"
+        this.imgCon.style.top = -i*200 + 'px'
+      }, 10) 
     }
   } 
-
 
   // fade
   fadeSwitch(i) {
@@ -65,7 +69,6 @@ class Swiper {
     this.timer = setInterval(() => {
       this.activeIndex ++
       if (this.trigger === 'vertical') { this.verticalSwitch(this.activeIndex) }
-      // else if (this.trigger === 'fade') this.fadeSwitch(this.activeIndex)
       if (this.activeIndex === this.tabs.length) this.activeIndex = 0
       this.changeTabIndex(this.activeIndex)
     }, 2000);
@@ -73,4 +76,21 @@ class Swiper {
 }
 
 const a = new Swiper('vertical')
-// const b = new Swiper('fade')
+
+class StarPoint {
+  constructor(pointArr) {
+    this.points = pointArr
+    this.starNodes = document.querySelectorAll('.star-con .star-wrap')
+    this.init()
+  }
+  init() {
+    this.starNodes.forEach((v, i) => {
+      const starWidth = v.offsetWidth
+      const count =  parseInt(this.points[i] / 5 * starWidth)
+      v.style.width = count + 'px'
+    })
+  }
+
+}
+
+const b = new StarPoint([5, 3.5, 4.6])
