@@ -336,7 +336,9 @@ nav div {
     display: flex;
     align-items: center;
     font-size: 12px;
-    color: #333333
+    color: #333333;
+    margin-bottom: 2px;
+
 }
 
 .main .rank-con .start-btn {
@@ -346,7 +348,8 @@ nav div {
     background:linear-gradient(#ff8502, #fe6000);
     text-align: center;
     color: #fff;
-    font-size: 14px 
+    font-size: 14px;
+    border-radius: 3px
 }
 
 
@@ -357,10 +360,35 @@ nav div {
 
 
 .main .bot .right .app-item {
-    width: 76px;
-    margin-right: 8px;
+    width: 72px;
+    margin-right:12px;
 }
 
-.main .app-con ul li:nth-child(-n+3){
+.main .app-con ul .app-item:nth-child(3n+3){
     margin-right: 0px;
+}
+
+footer {
+    height: 46px;
+    background: #ae6387;
+    border-top: 1px solid #a75a7f;
+    text-align: center;
+    line-height: 12px;
+    font-size: 12px;
+    color: #fff;
+    padding-top: 16px
+}
+
+footer a {
+    height: 10px;
+    line-height: 10px;
+    display: inline-block;
+    padding:0 8px;
+    color: #fff;
+    border-right: 1px solid #fff;
+    
+}
+
+footer a:hover {
+    color: #fff
 }

@@ -64,7 +64,7 @@ class Swiper {
   autoAnimation() {
     this.timer = setInterval(() => {
       this.activeIndex ++
-      if (this.trigger === 'vertical') this.verticalSwitch(this.activeIndex)
+      if (this.trigger === 'vertical') { this.verticalSwitch(this.activeIndex) }
       // else if (this.trigger === 'fade') this.fadeSwitch(this.activeIndex)
       if (this.activeIndex === this.tabs.length) this.activeIndex = 0
       this.changeTabIndex(this.activeIndex)
