@@ -1,8 +1,8 @@
 const imgList = ['./images/swiper01.jpg', './images/swiper02.jpg', './images/swiper03.jpg', './images/swiper04.jpg']
 class Swiper {
-  constructor(dom,trigger, isAuto) {
+  constructor(dom,trigger, isAuto, activeIndex = 0) {
     this.imgList = imgList
-    this.activeIndex = 0;
+    this.activeIndex = activeIndex >= this.imgList.length ? this.imgList.length - 1 : activeIndex;
     this.dom = '#' + dom
     this.root = document.querySelector(this.dom)
     this.showCon
@@ -43,7 +43,7 @@ class Swiper {
     },['', ''])
     this.tabCon.innerHTML = domArr[1]
     this.tabs = this.root.querySelectorAll('.chosen-btn li')
-    if (this.trigger === 'vertical') { 
+    if (this.trigger === 'vertical') {
       this.imgCon.innerHTML = domArr[0]
       this.imgNodes = this.root.querySelectorAll('.swiper-con .show li')
       this.cloneNode()
@@ -54,7 +54,8 @@ class Swiper {
 
   //copy node 方便无缝衔接
   cloneNode() {
-    this.imgCon.style.cssText="transition: top 1s ease-out; top: 0"
+    const top = -this.activeIndex * 200
+    this.imgCon.style.cssText="transition: top 1s ease-out; top: " + top + 'px'
     this.imgNodes.forEach(v => {this.imgCon.appendChild( v.cloneNode(true))})
   }
 
@@ -62,7 +63,7 @@ class Swiper {
   initfadeNode () {
     const wrapDom = document.createElement('div')
     wrapDom.className = 'wrap'
-    wrapDom.style.cssText = `background: url(${imgList[this.activeIndex]}); transition: opacity .5s ease-out; opacity: 1`
+    wrapDom.style.cssText = `background-image: url(${imgList[this.activeIndex]}); transition: opacity .5s ease-out; opacity: 1`
     this.root.querySelector('.swiper-con .show').appendChild(wrapDom)
     this.fadeWrap = this.root.querySelector('.swiper-con .show .wrap')
   }
@@ -127,8 +128,8 @@ class Swiper {
 }
 
 // const swiper = new Swiper('vertical', true)
-const swiper = new Swiper('sw1','vertical', true)
-const swiper2 = new Swiper('sw2','fade', true)
+const swiper = new Swiper('sw1','vertical', true, 3)
+const swiper2 = new Swiper('sw2','fade', true, 2)
 
 class StarPoint {
   constructor(pointArr) {
