@@ -5,34 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/swiper.css">
 </head>
 <body>
   <header>
     <div class="inner">
       <nav>
-        <img src="./images/logo.png" alt="">
+        <a class="logo" href="./swiper.html">
+          <img src="./images/logo.png" alt="">
+        </a>
+        
         <ul>
           <li>
             <a href="##">游戲 首页</a>
           </li>
           <li>
-              <a href="##">小游戏</a>
+            <a href="##">小游戏</a>
           </li>
           <li>
-              <a href="##">单机游戏</a>
+            <a href="##">单机游戏</a>
           </li>
           <li>
-              <a href="##">网络游戏</a>
+            <a href="##">网络游戏</a>
           </li>
           <li>
-              <a href="##">网页游戏</a>
+            <a href="##">网页游戏</a>
+          </li class="new">
+          <li>
+            <a href="##">手机游戏</a>
           </li>
           <li>
-              <a href="##">手机游戏</a>
-          </li>
-          <li>
-              <a href="##">游戏视频</a>
+            <div class="bridge">
+              <img src="./images/bridge.png" alt="">
+            </div>
+            <a href="##">游戏视频</a>
           </li>
           <li>
               <a href="##">游戏专题</a>
@@ -41,7 +49,7 @@
               <a href="##">游戏网址</a>
           </li>
         </ul>
-        <div>加入收藏</div>
+        <div class="addlike">加入收藏</div>
       </nav>
     </div>
 
@@ -52,46 +60,33 @@
   <div class="main">
     <div class="inner">
       <div class="top border-section">
-        <div class="swiper-con">
-          <div class="show">
-            <ul>
-              <li>
-                <i>1</i>
-                <img src="./images/swiper01.jpg" alt="">
-              </li>
-              <li>
-                <i>2</i>
-                <img src="./images/swiper01.jpg" alt="">
-              </li>
-              <li>
-                <i>3</i>
-                <img src="./images/swiper01.jpg" alt="">
-              </li>
-              <li>
-                <i>4</i>
-                <img src="./images/swiper01.jpg" alt="">
-              </li>
-                      
-            </ul>
-          </div>
-          
-          <ul class="chosen-btn">
-            <li class="active">
-              <img src="./images/swiper01.jpg" alt="">              
-            </li>
-            <li>
-              <img src="./images/swiper01.jpg" alt="">              
-            </li>
-            <li>
-              <img src="./images/swiper01.jpg" alt="">              
-            </li>
-            <li>
-              <img src="./images/swiper01.jpg" alt="">              
-            </li>
-          </ul>
-        </div>
+        <div id='sw1'></div>
         <div class="app-con">
           <ul>
+            <li class="app-item">
+              <a href="##">
+                <img src="./images/app.jpg" alt="">
+                <span>睡衣男孩雪地猫</span>
+              </a>
+            </li>
+            <li class="app-item">
+              <a href="##">
+                <img src="./images/app.jpg" alt="">
+                <span>睡衣男孩雪地猫</span>
+              </a>
+            </li>
+            <li class="app-item">
+              <a href="##">
+                <img src="./images/app.jpg" alt="">
+                <span>睡衣男孩雪地猫</span>
+              </a>
+            </li>
+            <li class="app-item">
+              <a href="##">
+                <img src="./images/app.jpg" alt="">
+                <span>睡衣男孩雪地猫</span>
+              </a>
+            </li>
             <li class="app-item">
               <a href="##">
                 <img src="./images/app.jpg" alt="">
@@ -176,9 +171,17 @@
                 <div class="start-btn">开始游戏</div>
               </div>
             </li>
-    
+            <li class="game-item">
+              <a href="##" >
+                <img src="./images/swiper01.jpg" alt="">
+              </a>
+              <div class="text">
+                <p class="game-title">欺诈盗贼中文版</p> 
+                <p class="game-text">一名盗贼嵌入了一座城堡，城堡充满了不可思议的游戏，冲满了创意。。。</p>
+                <div class="start-btn">开始游戏</div>
+              </div>
+            </li>
           </ul>
-
         </div>
         <div class="title-section right">
           <img src="./images/rank.png" alt="" class="title">
@@ -189,6 +192,9 @@
                 <p class="rank-title">极品飞机失控版</p>
                 <div class="rank-level">
                   <span>恶搞登记：</span>
+                  <div class="star-con">
+                    <div class="star-wrap"></div>
+                  </div>
                 </div>
                 <div class="start-btn">开始游戏</div>
               </div>
@@ -199,6 +205,22 @@
                 <p class="rank-title">极品飞机失控版</p>
                 <div class="rank-level">
                   <span>恶搞登记：</span>
+                  <div class="star-con">
+                    <div class="star-wrap"></div>
+                  </div>
+                </div>
+                <div class="start-btn">开始游戏</div>
+              </div>
+            </li>
+            <li class="rank-item">
+              <img src="./images/app.jpg" alt="">
+              <div class="text">
+                <p class="rank-title">极品飞机失控版</p>
+                <div class="rank-level">
+                  <span>恶搞登记：</span>
+                  <div class="star-con">
+                    <div class="star-wrap"></div>
+                  </div>
                 </div>
                 <div class="start-btn">开始游戏</div>
               </div>
@@ -220,7 +242,19 @@
               <li class="app-item">
                 <a href="##">
                   <img src="./images/app.jpg" alt="">
-                  <span>睡衣男孩雪地猫</span>
+                  <span>皇城突袭前线</span>
+                </a>
+              </li>
+              <li class="app-item">
+                <a href="##">
+                  <img src="./images/app.jpg" alt="">
+                  <span>极限越野中文版</span>
+                </a>
+              </li>
+              <li class="app-item">
+                <a href="##">
+                  <img src="./images/app.jpg" alt="">
+                  <span>蜗牛鲍勃5</span>
                 </a>
               </li>
               <li class="app-item">
@@ -232,7 +266,19 @@
               <li class="app-item">
                 <a href="##">
                   <img src="./images/app.jpg" alt="">
-                  <span>睡衣男孩雪地猫</span>
+                  <span>皇城突袭前线</span>
+                </a>
+              </li>
+              <li class="app-item">
+                <a href="##">
+                  <img src="./images/app.jpg" alt="">
+                  <span>极限越野中文版</span>
+                </a>
+              </li>
+              <li class="app-item">
+                <a href="##">
+                  <img src="./images/app.jpg" alt="">
+                  <span>蜗牛鲍勃5</span>
                 </a>
               </li>
               <li class="app-item">
@@ -244,7 +290,19 @@
               <li class="app-item">
                 <a href="##">
                   <img src="./images/app.jpg" alt="">
-                  <span>睡衣男孩雪地猫</span>
+                  <span>皇城突袭前线</span>
+                </a>
+              </li>
+              <li class="app-item">
+                <a href="##">
+                  <img src="./images/app.jpg" alt="">
+                  <span>极限越野中文版</span>
+                </a>
+              </li>
+              <li class="app-item">
+                <a href="##">
+                  <img src="./images/app.jpg" alt="">
+                  <span>蜗牛鲍勃5</span>
                 </a>
               </li>
               <li class="app-item">
@@ -256,71 +314,96 @@
               <li class="app-item">
                 <a href="##">
                   <img src="./images/app.jpg" alt="">
-                  <span>睡衣男孩雪地猫</span>
+                  <span>皇城突袭前线</span>
                 </a>
               </li>
             </ul>
           </div>
         </div>
-        <div class="title-section right">
+        <div class="title-section right ">
           <img src="./images/rank.png" alt="" class="title">
           <div class="app-con">
-              <ul>
-                <li class="app-item">
-                  <a href="##">
+						<ul>
+							<li class="app-item list-item">
+								<a href="##">
+									<div class="img-con">
                     <img src="./images/app.jpg" alt="">
-                    <span>睡衣男孩雪地猫</span>
-                  </a>
-                </li>
-                <li class="app-item">
-                  <a href="##">
+                  </div>
+                  <div class="img-border"></div>
+                  <div class="img-border"></div>
+									<span>娃娃芭比</span>
+								</a>
+              </li>
+              <li class="app-item list-item">
+                <a href="##">
+                  <div class="img-con">
                     <img src="./images/app.jpg" alt="">
-                    <span>睡衣男孩雪地猫</span>
-                  </a>
-                </li>
-                <li class="app-item">
-                  <a href="##">
+                  </div>
+                  <div class="img-border"></div>
+                  <div class="img-border"></div>
+                  <span>娃娃芭比</span>
+                </a>
+              </li>
+              <li class="app-item list-item">
+                <a href="##">
+                  <div class="img-con">
                     <img src="./images/app.jpg" alt="">
-                    <span>睡衣男孩雪地猫</span>
-                  </a>
-                </li>
-                <li class="app-item">
-                  <a href="##">
+                  </div>
+                  <div class="img-border"></div>
+                  <div class="img-border"></div>
+                  <span>娃娃芭比</span>
+                </a>
+              </li>
+              <li class="app-item list-item">
+                <a href="##">
+                  <div class="img-con">
                     <img src="./images/app.jpg" alt="">
-                    <span>睡衣男孩雪地猫</span>
-                  </a>
-                </li>
-                <li class="app-item">
-                  <a href="##">
+                  </div>
+                  <div class="img-border"></div>
+                  <div class="img-border"></div>
+                  <span>娃娃芭比</span>
+                </a>
+              </li>
+              <li class="app-item list-item">
+                <a href="##">
+                  <div class="img-con">
                     <img src="./images/app.jpg" alt="">
-                    <span>睡衣男孩雪地猫</span>
-                  </a>
-                </li>
-                <li class="app-item">
-                  <a href="##">
+                  </div>
+                  <div class="img-border"></div>
+                  <div class="img-border"></div>
+                  <span>娃娃芭比</span>
+                </a>
+              </li>
+              <li class="app-item list-item">
+                <a href="##">
+                  <div class="img-con">
                     <img src="./images/app.jpg" alt="">
-                    <span>睡衣男孩雪地猫</span>
-                  </a>
-                </li>
-                <li class="app-item">
-                  <a href="##">
-                    <img src="./images/app.jpg" alt="">
-                    <span>睡衣男孩雪地猫</span>
-                  </a>
-                </li>
-                <li class="app-item">
-                  <a href="##">
-                    <img src="./images/app.jpg" alt="">
-                    <span>睡衣男孩雪地猫</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
+                  </div>
+                  <div class="img-border"></div>
+                  <div class="img-border"></div>
+                  <span>娃娃芭比</span>
+                </a>
+              </li>
+						</ul>
+          </div>
         </div>
       </section>
     </div>
   </div>
+
+  <footer>
+    <a href="##">关于2345</a>
+    <a href="##">意见反馈</a>
+    <a href="##">网站地图</a>
+    <i> Copyright  2345网址导航   All Rights Reserved. </i> 
+  </footer>
   
 </body>
 <script src="./index.js"></script>
+<script>
+	// const swiper = new Swiper('vertical', true)
+	const swiper = new Swiper('sw1','vertical', true, 3)
+	// const swiper2 = new Swiper('sw2','fade', true, 2)
+	const starLevel = new StarPoint([6, 3.5, 4.6])
+</script>
 </html>

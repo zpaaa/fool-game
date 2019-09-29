@@ -1,0 +1,84 @@
+/* swiper */
+
+.swiper-con {
+    display: flex;
+    width: 350px;
+    border: 1px #cccccc solid;
+}
+
+.swiper-con .swiper-con-show{
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    background-size: contain
+}
+
+.swiper-con .swiper-con-wrap{
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background-size: contain
+}
+
+.swiper-con .swiper-con-show ul{
+    position: relative;
+    z-index: 98
+}
+.swiper-con .swiper-con-show li {
+    height: 200px;
+    position: relative;
+}
+
+.swiper-con .swiper-con-show img {
+    width: 100%;
+    height: 100%
+}
+.swiper-con .swiper-con-show li i{
+    position: absolute;
+    left: 10px;
+    top: 20px
+}
+
+.swiper-con .chosen-btn li{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    z-index: 100;
+}
+
+.swiper-con .chosen-btn .active {
+    position: relative;
+    box-sizing: border-box;
+}
+
+.swiper-con .chosen-btn .active::after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border: 6px solid;
+    border-color: transparent #ff9900  transparent transparent;
+    transform: translate(-100%,-50%)
+}
+
+.swiper-con .chosen-btn .active::before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid#ff9900;
+}
+
+.swiper-con .chosen-btn li img {
+    width: 100%;
+    height: 100%
+}

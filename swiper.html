@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>swiper演示</title>
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/swiper.css">
+  <style scoped>
+    .inner {
+      width: 800px;
+      padding: 20px;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    .inner>div {
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="inner">
+    <div>
+      上下滑动 自动播放 初始0 
+      <div id="sw1"></div>
+    </div>
+    <div>
+       淡入淡出 自动播放 初始1
+      <div id="sw2"></div>
+    </div>
+    <!-- <div>
+      上下滑动  初始2 
+      <div id="sw3"></div>
+    </div>
+    <div>
+      淡入淡出  初始3 
+      <div id="sw4"></div>
+    </div> -->
+  </div>
+  
+</body>
+<script src="./index.js"></script>
+<script>
+  const swiper1 = new Swiper('sw1','vertical', true, 0)
+	const swiper2 = new Swiper('sw2','fade', true, 1)
+	// const swiper3 = new Swiper('sw3','vertical', false, 2)
+	// const swiper4 = new Swiper('sw4','fade', false, 3)
+</script>
+</html>
