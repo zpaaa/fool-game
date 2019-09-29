@@ -7,7 +7,7 @@ npm start  //http://localhost:3000/index.html
 
 ## 页面路径
 
-- /index.html 项目首页
+- /index.html 项目首页  点击2345 logo 跳转至swiper.html
 
 - /swiper.html 项目轮播图展示页面
 
