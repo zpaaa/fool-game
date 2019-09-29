@@ -135,9 +135,8 @@ class StarPoint {
   }
   init() {
     this.starNodes.forEach((v, i) => {
-      const starWidth = v.offsetWidth
-      const count =  parseInt(this.points[i] / 5 * starWidth)
-      v.style.width = count + 'px'
+      const count =  this.points[i] / 5
+      v.style.width = count.toFixed(2) * 100 +'%'
     })
   }
 }
