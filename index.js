@@ -27,14 +27,14 @@ class Swiper {
   // 生成Dom 
   initDom() {
     this.root.innerHTML = `<div class="swiper-con">
-                            <div class="show">
+                            <div class="swiper-con-show">
                               <ul></ul>
                             </div>
                             <ul class="chosen-btn">
                             </ul>
                           </div>`
-    this.showCon = this.root.querySelector('.swiper-con .show')
-    this.imgCon = this.root.querySelector('.swiper-con .show ul')
+    this.showCon = this.root.querySelector('.swiper-con .swiper-con-show')
+    this.imgCon = this.root.querySelector('.swiper-con .swiper-con-show ul')
     this.tabCon = this.root.querySelector('.chosen-btn')
     const domArr = this.imgList.reduce((prev, curr, index) => {
       prev[0]+= `<li><img src="${curr}" alt=""></li>`
@@ -45,7 +45,7 @@ class Swiper {
     this.tabs = this.root.querySelectorAll('.chosen-btn li')
     if (this.trigger === 'vertical') {
       this.imgCon.innerHTML = domArr[0]
-      this.imgNodes = this.root.querySelectorAll('.swiper-con .show li')
+      this.imgNodes = this.root.querySelectorAll('.swiper-con .swiper-con-show li')
       this.cloneNode()
     }
     if (this.trigger === 'fade') { this.initfadeNode() }
@@ -62,10 +62,10 @@ class Swiper {
   // fade 插入一个wrap 显示层
   initfadeNode () {
     const wrapDom = document.createElement('div')
-    wrapDom.className = 'wrap'
+    wrapDom.className = 'swiper-con-wrap'
     wrapDom.style.cssText = `background-image: url(${imgList[this.activeIndex]}); transition: opacity .5s ease-out; opacity: 1`
-    this.root.querySelector('.swiper-con .show').appendChild(wrapDom)
-    this.fadeWrap = this.root.querySelector('.swiper-con .show .wrap')
+    this.root.querySelector('.swiper-con .swiper-con-show').appendChild(wrapDom)
+    this.fadeWrap = this.root.querySelector('.swiper-con .swiper-con-show .swiper-con-wrap')
   }
 
   // 注册按钮点击切换事件
@@ -127,10 +127,6 @@ class Swiper {
   }
 }
 
-// const swiper = new Swiper('vertical', true)
-const swiper = new Swiper('sw1','vertical', true, 3)
-const swiper2 = new Swiper('sw2','fade', true, 2)
-
 class StarPoint {
   constructor(pointArr) {
     this.points = pointArr
@@ -145,5 +141,3 @@ class StarPoint {
     })
   }
 }
-
-const starLevel = new StarPoint([5, 3.5, 4.6])
