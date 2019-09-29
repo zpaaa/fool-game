@@ -28,7 +28,6 @@
     border: 3px solid #be5076;
     background: #fff;
     border-radius: 6px
-   
 }
 
 .main .title-section { 
@@ -107,9 +106,14 @@
 
 .main .game-con .game-item {
     display: flex;
-    margin-right: 5px;
-    margin-bottom: 15px
+    margin-right: 15px;
+    margin-bottom: 15px;
 }
+
+.main .game-con .game-item:nth-child(2n+2) {
+    margin-right: 0
+}
+
 
 .main .game-con .game-item a{
     display: block;
@@ -132,7 +136,7 @@
 .main .game-con .game-item .game-text {
     width:150px;
     font-size: 12px;
-    line-height: 21px;
+    line-height: 22px;
     color: #666666;
     display: -webkit-box;
     -webkit-box-orient: vertical;
