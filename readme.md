@@ -1,7 +1,7 @@
 ## 本地运行  
 
 ```bush
-npm start  //http://172.17.20.27:3000/index.html
+npm start  //http://localhost:3000/index.html
 ```
 
 

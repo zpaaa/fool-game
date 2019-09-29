@@ -1,0 +1,266 @@
+/* banner css */
+
+
+.banner {
+    margin: 0 auto;
+}
+
+.banner img {
+    width: 100vw;
+    min-width: 990px;
+    display: block
+}
+
+/* main css */
+
+.main {
+    width: 100vw;
+    padding-top: 15px
+}
+
+.main section{
+    display: flex;
+    justify-content: space-between;
+}
+
+.main .border-section {
+    padding: 15px;
+    border: 3px solid #be5076;
+    background: #fff;
+    border-radius: 6px
+   
+}
+
+.main .title-section { 
+    border: 3px solid #be5076;
+    border-top-width: 33px;
+    border-radius: 6px;
+    padding: 15px;
+    background: #fff;
+    position: relative;
+}
+
+.main .title-section .title {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%) 
+}
+
+
+.top, .mid, .bot {
+    margin-bottom: 16px
+}
+
+
+.main .top{
+    display: flex;
+    justify-content: space-between;
+}
+
+.main .left {
+    width: 700px;
+    box-sizing: border-box
+}
+
+.main .right {
+    width: 280px;
+    box-sizing: border-box
+} 
+
+.main .app-con ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+.main .app-con ul li {
+    width: 100px;
+}
+
+.main .app-con ul li:nth-child(-n+6){
+    margin-bottom: 14px;
+}
+.main .app-item a{
+    display: block;
+    text-align: center;
+    color: #333333;
+    font-size: 12px;
+}
+
+.main .app-item img{
+    display: block;
+    width: 72px;
+    height: 72px;
+    border-radius: 7px;
+    margin: 0 auto
+}
+
+.main .app-item a span{
+    height: 22px;
+    line-height: 22px;
+    display: inline-block
+}
+.main .game-con {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.main .game-con .game-item {
+    display: flex;
+    margin-right: 5px;
+    margin-bottom: 15px
+}
+
+.main .game-con .game-item a{
+    display: block;
+    margin-right: 16px
+}
+
+.main .game-con .game-item img {
+    width: 150px;
+    height: 130px;
+    display: block;
+}
+
+
+.main .game-con .game-item .game-title {
+    font-size: 14px;
+    color: #333;
+    line-height: 24px;
+    font-weight: bold
+}
+.main .game-con .game-item .game-text {
+    width:150px;
+    font-size: 12px;
+    line-height: 21px;
+    color: #666666;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    word-break: break-all
+}
+
+.main .game-con .start-btn {
+    width: 108px;
+    height: 33px;
+    line-height: 33px;
+    text-align: center;
+    margin-top: 7px;
+}
+
+.main .rank-con {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main .rank-item {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.main .rank-item:nth-last-child(1) {
+    margin-bottom: 0
+}
+
+.main .rank-con img {
+    display: block;
+    width: 72px;
+    height: 72px;
+    border-radius: 3px;
+    margin-right: 14px
+}
+.main .rank-con .rank-title {
+    line-height: 16px;
+    font-size: 14px;
+    color: #333333;
+    font-weight: bold
+}
+.main .rank-con .rank-level {
+    height: 26px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: #333333;
+    margin-bottom: 2px;
+}
+
+.main .rank-con .star-con {
+    width: 74px;
+    height: 12px;
+    background: url(../images/grey-satrt.png);
+    position: relative;
+    overflow: hidden;
+}
+
+.main .rank-con .star-con .star-wrap {
+    width: 74px;
+    height: 12px;
+    background: url(../images/orange-start.png);
+}
+
+.main .rank-con .start-btn {
+    width: 84px;
+    height: 27px;
+    line-height: 27px;
+    font-size: 14px;
+}
+
+
+
+.main .bot .app-con ul li {
+    width: 94px;
+}
+
+
+.main .bot .right .app-item {
+    width: 72px;
+    margin-right:12px;
+    position: relative;
+}
+
+.main .bot .right .app-item .img-border, .img-con {
+    width: 68px;
+    height: 58px;
+    border: 1px solid #c9c9c9;
+    box-sizing: border-box;
+    border-radius: 5px;
+    
+} 
+
+.main .bot .right .app-item .img-con{
+    position: relative;
+    background: #fff;
+    overflow: hidden;
+    padding: 2px;
+    z-index: 20
+}
+
+.main .bot .right .app-item .img-border {
+    position: absolute;
+    left: 2px;
+    top: 2px;
+}
+
+.main .bot .right .app-item .img-border:nth-child(2) {
+    position: absolute;
+    left: 4px;
+    top: 4px;
+}
+
+.main .bot .right .app-item .img-con img {
+    width: 100%;
+    height: 100%;
+}
+
+.main .app-con ul .list-item {
+    margin: 5px  0 10px 0
+}
+
+.main .app-con ul .list-item:nth-child(3n+3){
+    margin-right: 0px;
+}
+.main .app-con ul .list-item span {
+    margin-top: 4px
+}
